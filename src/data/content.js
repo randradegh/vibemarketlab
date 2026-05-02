@@ -7,36 +7,36 @@ export const navItems = [
 
 export const trustSignals = [
   "Pensado para pymes en México",
-  "Implementación rápida",
-  "IA aplicada con criterio, no humo",
-  "Listo en semanas, no meses",
+  "Resultados en semanas, no meses",
+  "Diseño que se nota, estrategia que funciona",
+  "IA con criterio, no humo",
 ];
 
 export const problemItems = [
   {
-    icon: "barChart",
-    title: "Publicas, pero no conviertes",
-    description: "Generas contenido constantemente, pero los leads no se materializan en ventas.",
+    icon: "users",
+    title: "Publicas, pero no llegan clientes",
+    description: "Generas contenido constantemente, pero las ventas no se materializan.",
   },
   {
-    icon: "palette",
-    title: "Cada pieza se ve distinta",
-    description: "No hay consistencia visual ni mensaje claro que tu audiencia reconozca.",
+    icon: "sparkles",
+    title: "Tu marca se ve igual que la competencia",
+    description: "No hay nada que te haga diferente. Te confunden con cualquier otro.",
   },
   {
-    icon: "messageSquare",
-    title: "Tu mensaje cambia todo el tiempo",
-    description: "Sin un posicionamiento fijo, tu marca no genera confianza ni reconocimiento.",
+    icon: "clock",
+    title: "No tienes tiempo para marketing",
+    description: "Entre operar el negocio y hacer contenido, el día no alcanza.",
   },
   {
-    icon: "cpu",
-    title: "No sabes cómo usar IA sin perder coherencia",
-    description: "Has probado herramientas de IA, pero el resultado es disperso y despersonalizado.",
+    icon: "layout",
+    title: "Todo lo que haces parece improvisado",
+    description: "No hay coherencia. Cada post es diferente. No hay estrategia.",
   },
   {
-    icon: "gitBranch",
-    title: "Tienes marketing, pero no un sistema",
-    description: "Las acciones están desconectadas: no hay funnel, no hay seguimiento, no hay medición.",
+    icon: "eye",
+    title: "Quieres que te noten, pero no sabes cómo",
+    description: "Sientes que tu negocio merece ser visto, pero no encontrás la fórmula.",
   },
 ];
 
@@ -44,17 +44,17 @@ export const methodSteps = [
   {
     number: "01",
     title: "Diagnóstico",
-    description: "Evaluamos tu presencia digital actual y identificamos los puntos críticos.",
+    description: "Evaluamos tu situación actual y encontramos lo que frena tu crecimiento.",
   },
   {
     number: "02",
-    title: "Definición de Vibe",
-    description: "Establecemos tu personalidad de marca, mensaje核 心 y dirección creativa.",
+    title: "Definición",
+    description: "Establecemos tu personalidad de marca y el mensaje que te diferencia.",
   },
   {
     number: "03",
-    title: "Activación con IA",
-    description: "Implementamos un mini-sistema automatizado para producir y convertir.",
+    title: "Activación",
+    description: "Implementamos un sistema que te trae clientes sin que tú hagas todo el trabajo.",
   },
 ];
 
@@ -64,10 +64,10 @@ export const packageItems = [
     name: "Diagnóstico Flash",
     tagline: "Tu punto de partida sin riesgo",
     description:
-      "En 45 minutos detectamos tus cuellos de botella principales y te damos una ruta clara para activar marketing con IA sin perder semanas en prueba y error.",
+      "En 45 minutos sabemos exactamente qué está frenando tu crecimiento y te damos un plan para empezar a atraer más clientes esta semana.",
     includes: [
       "Llamada de 30-45 minutos",
-      "Mini auditoría de presencia digital",
+      "Auditoría de presencia digital",
       "3 oportunidades accionables en 30 días",
       "Recomendación del siguiente paso",
     ],
@@ -81,14 +81,14 @@ export const packageItems = [
     name: "Vibe Starter",
     tagline: "Tu primer sistema real",
     description:
-      "Definimos tu vibra de marca, configuramos tu base de IA y salimos con un mini-sistema listo para comunicar mejor y captar oportunidades.",
+      "Tu marca lista para destacar, un sistema que te trae clientes solos, y contenido para las próximas semanas. Listo para usar.",
     includes: [
-      "Definición de vibra de marca",
-      "Configuración de agente IA de contenidos",
-      "Diseño de mini-funnel",
-      "Secuencia de emails",
-      "Piezas base de contenido",
-      "Recomendaciones de operación inmediata",
+      "Definición de personalidad de marca",
+      "Configuración de base de contenidos con IA",
+      "Diseño de sistema de atracción de clientes",
+      "Secuencia de seguimiento",
+      "Piezas de contenido para tu red principal",
+      "Recomendaciones de operación",
     ],
     forWho: "Para quién quiere resultados rápidos sin implementación compleja",
     duration: "2-3 semanas",
@@ -99,29 +99,29 @@ export const packageItems = [
 
 export const benefitItems = [
   {
+    icon: "gem",
+    title: "Tu marca va a verse profesional",
+    description: "Una imagen que te representa y te diferencia de la competencia.",
+  },
+  {
     icon: "target",
-    title: "Más claridad de mensaje",
-    description: "Un posicionamiento fijo que tu audiencia entiende en segundos.",
+    title: "Empiezas a atraer clientes",
+    description: "Un sistema que trabaja para ti, no al revés.",
   },
   {
     icon: "zap",
-    title: "Más velocidad",
-    description: "Producción de marketing 10x más rápida con IA integrada.",
+    title: "Tienes un sistema que funciona",
+    description: "Proceso documentado que puedes mantener y escalar.",
   },
   {
-    icon: "filter",
-    title: "Primer funnel ordenado",
-    description: "Un sistema que atrae, nurturing y convierte sin esfuerzo manual.",
+    icon: "messageCircle",
+    title: "Tu mensaje se entiende en segundos",
+    description: "Posicionamiento claro que conecta con tu audiencia.",
   },
   {
-    icon: "layers",
-    title: "Consistencia visual y verbal",
-    description: "Cada pieza encaja: desde LinkedIn hasta email.",
-  },
-  {
-    icon: "trendingUp",
-    title: "Base para escalar",
-    description: "Un sistema documentado que puedes expandir cuando quieras.",
+    icon: "shield",
+    title: "Te diferencia de la competencia",
+    description: "Una propuesta de valor que no se puede copiar.",
   },
 ];
 

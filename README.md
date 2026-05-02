@@ -1,6 +1,10 @@
 # VibeMarket Lab
 
-Landing page para **VibeMarket Lab**, agencia boutique de Vibe Marketing / Vibe Coding orientada a pymes en México.
+Landing page para **VibeMarket Lab**, agencia boutique de Vibe Marketing con IA orientada a pymes en México.
+
+## Diseño
+
+Este sitio es un ejemplo de lo que somos capaces de hacer: diseño distintivo, personalidad, y ejecución de primer nivel. No es un template más — es un showcase de nuestra capacidad creativa.
 
 ## Tech stack
 
@@ -51,6 +55,7 @@ Edita las variables CSS en `src/index.css`:
 --color-text: #28251d;      /* Texto principal */
 --color-text-muted: #7a7974;
 --color-accent: #cedcd8;
+--color-warm: #da7101;
 ```
 
 ### Formulario
@@ -59,18 +64,6 @@ El componente `LeadFormModal.jsx` tiene el UI listo. Para conectar a un endpoint
 
 1. Busca `handleSubmit` en `src/components/LeadFormModal.jsx`
 2. Reemplaza el `setTimeout` con tu llamada fetch
-
-```javascript
-const handleSubmit = async (e) => {
-  e.preventDefault();
-  const response = await fetch('TU_ENDPOINT_AQUI', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify(formData)
-  });
-  // ... maneja respuesta
-};
-```
 
 ## Deploy
 

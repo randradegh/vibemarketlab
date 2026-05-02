@@ -1,74 +1,89 @@
+import { useState, useEffect } from "react";
 import { Search, Sparkles, Rocket } from "lucide-react";
 import { methodSteps } from "../data/content";
 
 const iconMap = [Search, Sparkles, Rocket];
 
 export default function MethodSection() {
+  const [isVisible, setIsVisible] = useState(false);
+  
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+        }
+      },
+      { threshold: 0.1 }
+    );
+    
+    const section = document.getElementById("metodo");
+    if (section) observer.observe(section);
+    
+    return () => observer.disconnect();
+  }, []);
+
   return (
-    <section id="metodo" className="py-20 sm:py-28 px-4 sm:px-6 lg:px-8" style={{ backgroundColor: "var(--color-bg)" }}>
+    <section 
+      id="metodo" 
+      className="py-24 sm:py-32 px-4 sm:px-6 lg:px-8 relative"
+      style={{ backgroundColor: "var(--color-surface)" }}
+    >
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
-          <h2
+          <span 
+            className="inline-block px-4 py-1.5 rounded-full text-xs font-medium mb-4"
+            style={{ backgroundColor: "var(--color-accent)", color: "var(--color-text)" }}
+          >
+            Nuestro proceso
+          </span>
+          <h2 
             className="text-3xl sm:text-4xl lg:text-5xl font-display font-semibold mb-4"
             style={{ color: "var(--color-text)" }}
           >
-            Nuestro método
+            De cero a clientes en 3 pasos
           </h2>
-          <p
-            className="text-lg text-text-muted max-w-2xl mx-auto"
-            style={{ color: "var(--color-text-muted)" }}
-          >
-            Un proceso simple y accionable para transformar tu marketing en 3 pasos.
-          </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8 lg:gap-12">
+        <div className="grid md:grid-cols-3 gap-8 lg:gap-12 relative">
+          {/* Linea conectora */}
+          <div className="hidden md:block absolute top-16 left-[16%] right-[16%] h-px" style={{ backgroundColor: "var(--color-accent)" }} />
+          
           {methodSteps.map((step, index) => {
             const Icon = iconMap[index];
             return (
-              <div key={index} className="relative">
+              <div 
+                key={index}
+                className={`relative text-center ${
+                  isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
+                }`}
+                style={{ transitionDelay: `${index * 200}ms` }}
+              >
                 {/* Step number */}
-                <div className="flex items-center gap-4 mb-6">
-                  <span
-                    className="text-5xl font-display font-bold"
-                    style={{ color: "var(--color-accent)" }}
-                  >
-                    {step.number}
-                  </span>
-                  <div
-                    className="w-12 h-12 rounded-full flex items-center justify-center"
+                <div className="flex justify-center mb-6">
+                  <div 
+                    className="relative w-16 h-16 rounded-2xl flex items-center justify-center shadow-lg z-10 transition-transform hover:scale-110"
                     style={{ backgroundColor: "var(--color-primary)" }}
                   >
-                    <Icon size={20} color="white" />
+                    <span className="text-2xl font-display font-bold text-white">
+                      {String(index + 1).padStart(2, '0')}
+                    </span>
                   </div>
                 </div>
 
                 {/* Content */}
-                <h3
+                <h3 
                   className="text-xl font-semibold mb-3"
                   style={{ color: "var(--color-text)" }}
                 >
                   {step.title}
                 </h3>
-                <p
-                  className="text-text-muted"
+                <p 
+                  className="text-text-muted text-sm leading-relaxed px-4"
                   style={{ color: "var(--color-text-muted)" }}
                 >
                   {step.description}
                 </p>
-
-                {/* Connector line */}
-                {index < methodSteps.length - 1 && (
-                  <div
-                    className="hidden md:block absolute top-8 -right-6 lg:-right-8 w-full h-px"
-                    style={{ backgroundColor: "var(--color-accent)" }}
-                  >
-                    <div
-                      className="absolute right-0 top-1/2 -translate-y-1/2 w-2 h-2 rounded-full"
-                      style={{ backgroundColor: "var(--color-accent)" }}
-                    ></div>
-                  </div>
-                )}
               </div>
             );
           })}

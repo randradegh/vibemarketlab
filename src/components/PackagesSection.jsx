@@ -1,45 +1,71 @@
-import { Check, Zap } from "lucide-react";
+import { useState, useEffect } from "react";
+import { Check, Zap, ArrowRight } from "lucide-react";
 import { packageItems } from "../data/content";
 
 export default function PackagesSection({ onOpenForm }) {
+  const [isVisible, setIsVisible] = useState(false);
+  
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+        }
+      },
+      { threshold: 0.1 }
+    );
+    
+    const section = document.getElementById("paquetes");
+    if (section) observer.observe(section);
+    
+    return () => observer.disconnect();
+  }, []);
+
   return (
-    <section id="paquetes" className="py-20 sm:py-28 px-4 sm:px-6 lg:px-8">
+    <section id="paquetes" className="py-24 sm:py-32 px-4 sm:px-6 lg:px-8">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
-          <h2
+          <span 
+            className="inline-block px-4 py-1.5 rounded-full text-xs font-medium mb-4"
+            style={{ backgroundColor: "var(--color-accent)", color: "var(--color-text)" }}
+          >
+            Paquetes
+          </span>
+          <h2 
             className="text-3xl sm:text-4xl lg:text-5xl font-display font-semibold mb-4"
             style={{ color: "var(--color-text)" }}
           >
-            Elige tu punto de entrada
+            Elige por dónde empezar
           </h2>
-          <p
-            className="text-lg text-text-muted max-w-2xl mx-auto"
+          <p 
+            className="text-lg text-text-muted max-w-xl mx-auto"
             style={{ color: "var(--color-text-muted)" }}
           >
-            Dos opciones diseñadas para diferentes etapas. Ambas te llevan a resultados.
+            Dos opciones para diferentes etapas. Ambas te llevan a resultados reales.
           </p>
         </div>
 
         <div className="grid lg:grid-cols-2 gap-8 max-w-4xl mx-auto">
-          {packageItems.map((pkg) => (
+          {packageItems.map((pkg, idx) => (
             <div
               key={pkg.id}
-              className={`relative p-6 sm:p-8 rounded-2xl transition-all duration-300 ${
-                pkg.popular ? "ring-2" : ""
-              }`}
+              className={`relative group p-6 sm:p-8 rounded-2xl transition-all duration-500 ${
+                isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
+              } ${pkg.popular ? "ring-2" : ""}`}
               style={{
                 backgroundColor: "var(--color-surface)",
                 ringColor: pkg.popular ? "var(--color-primary)" : "transparent",
+                transitionDelay: `${idx * 150}ms`,
               }}
             >
               {/* Popular badge */}
               {pkg.popular && (
                 <div
-                  className="absolute -top-3 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full text-xs font-medium flex items-center gap-1"
+                  className="absolute -top-3 left-1/2 -translate-x-1/2 px-4 py-1.5 rounded-full text-xs font-semibold flex items-center gap-1.5"
                   style={{ backgroundColor: "var(--color-primary)", color: "white" }}
                 >
                   <Zap size={12} />
-                  <span>Más popular</span>
+                  <span>Más elegido</span>
                 </div>
               )}
 
@@ -61,7 +87,7 @@ export default function PackagesSection({ onOpenForm }) {
 
               {/* Description */}
               <p
-                className="text-text-muted mb-6"
+                className="text-text-muted mb-6 leading-relaxed"
                 style={{ color: "var(--color-text-muted)" }}
               >
                 {pkg.description}
@@ -69,26 +95,31 @@ export default function PackagesSection({ onOpenForm }) {
 
               {/* Duration */}
               <div className="flex items-center gap-2 mb-6 text-sm">
-                <span style={{ color: "var(--color-text-muted)" }}>⏱</span>
+                <span style={{ color: "var(--color-text)" }}>⏱</span>
                 <span style={{ color: "var(--color-text-muted)" }}>{pkg.duration}</span>
               </div>
 
               {/* Includes */}
               <div className="mb-6">
                 <h4
-                  className="text-sm font-semibold mb-3"
+                  className="text-sm font-semibold mb-4"
                   style={{ color: "var(--color-text)" }}
                 >
                   Qué incluye:
                 </h4>
-                <ul className="space-y-2">
-                  {pkg.includes.map((item, idx) => (
-                    <li key={idx} className="flex items-start gap-2 text-sm">
-                      <Check
-                        size={16}
-                        className="mt-0.5 flex-shrink-0"
-                        style={{ color: "var(--color-primary)" }}
-                      />
+                <ul className="space-y-3">
+                  {pkg.includes.map((item, i) => (
+                    <li key={i} className="flex items-start gap-3 text-sm">
+                      <div
+                        className="w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5"
+                        style={{ backgroundColor: "var(--color-accent)" }}
+                      >
+                        <Check
+                          size={12}
+                          color="var(--color-primary)"
+                          strokeWidth={3}
+                        />
+                      </div>
                       <span style={{ color: "var(--color-text-muted)" }}>{item}</span>
                     </li>
                   ))}
@@ -97,7 +128,7 @@ export default function PackagesSection({ onOpenForm }) {
 
               {/* For who */}
               <div
-                className="p-3 rounded-lg text-sm mb-6"
+                className="p-4 rounded-xl text-sm mb-6"
                 style={{ backgroundColor: "var(--color-bg)" }}
               >
                 <span style={{ color: "var(--color-text-muted)" }}>{pkg.forWho}</span>
@@ -106,8 +137,8 @@ export default function PackagesSection({ onOpenForm }) {
               {/* CTA */}
               <button
                 onClick={onOpenForm}
-                className={`w-full py-3.5 rounded-lg font-medium transition-all duration-200 hover:opacity-90 ${
-                  pkg.popular ? "" : "border-2"
+                className={`group w-full py-3.5 rounded-lg font-medium transition-all duration-300 flex items-center justify-center gap-2 ${
+                  pkg.popular ? "" : "border-2 hover:bg-accent/30"
                 }`}
                 style={{
                   backgroundColor: pkg.popular ? "var(--color-primary)" : "transparent",
@@ -116,6 +147,7 @@ export default function PackagesSection({ onOpenForm }) {
                 }}
               >
                 {pkg.cta}
+                <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
               </button>
             </div>
           ))}

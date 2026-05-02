@@ -1,17 +1,28 @@
+import { Check } from "lucide-react";
 import { trustSignals } from "../data/content";
 
 export default function TrustBar() {
   return (
-    <section className="py-8 px-4 sm:px-6 lg:px-8 border-y" style={{ borderColor: "var(--color-accent)", backgroundColor: "var(--color-surface)" }}>
+    <section className="py-10 px-4 sm:px-6 lg:px-8" style={{ backgroundColor: "var(--color-bg)" }}>
       <div className="max-w-6xl mx-auto">
-        <div className="flex flex-wrap items-center justify-center gap-6 sm:gap-10">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
           {trustSignals.map((signal, index) => (
-            <div key={index} className="flex items-center gap-2 text-sm text-text-muted">
-              <span
-                className="w-2 h-2 rounded-full"
+            <div 
+              key={index} 
+              className="flex items-center gap-3"
+            >
+              <div 
+                className="w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0"
                 style={{ backgroundColor: "var(--color-primary)" }}
-              ></span>
-              <span>{signal}</span>
+              >
+                <Check size={12} color="white" strokeWidth={4} />
+              </div>
+              <span 
+                className="text-sm font-medium"
+                style={{ color: "var(--color-text)" }}
+              >
+                {signal}
+              </span>
             </div>
           ))}
         </div>
