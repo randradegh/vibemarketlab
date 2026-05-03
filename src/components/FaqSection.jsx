@@ -6,7 +6,7 @@ export default function FaqSection() {
   const [openIndex, setOpenIndex] = useState(0);
 
   return (
-    <section id="faq" className="py-24 sm:py-32 px-4 sm:px-6 lg:px-8" style={{ backgroundColor: "var(--color-surface)" }}>
+    <section id="faq" className="py-24 sm:py-32 px-4 sm:px-6 lg:px-8" style={{ backgroundColor: "var(--color-bg)" }}>
       <div className="max-w-3xl mx-auto">
         <div className="text-center mb-16">
           <span 

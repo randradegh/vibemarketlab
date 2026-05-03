@@ -22,7 +22,7 @@ export default function PackagesSection({ onOpenForm }) {
   }, []);
 
   return (
-    <section id="paquetes" className="py-24 sm:py-32 px-4 sm:px-6 lg:px-8">
+    <section id="paquetes" className="py-24 sm:py-32 px-4 sm:px-6 lg:px-8" style={{ backgroundColor: "var(--color-bg)" }}>
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
           <span 

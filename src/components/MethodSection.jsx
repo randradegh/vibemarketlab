@@ -27,7 +27,7 @@ export default function MethodSection() {
     <section 
       id="metodo" 
       className="py-24 sm:py-32 px-4 sm:px-6 lg:px-8 relative"
-      style={{ backgroundColor: "var(--color-surface)" }}
+      style={{ backgroundColor: "var(--color-bg)" }}
     >
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">

@@ -22,7 +22,7 @@ export default function SiteHeader({ onOpenForm }) {
           : "bg-transparent"
       }`}
       style={{ 
-        backgroundColor: isScrolled ? "rgba(249, 248, 245, 0.95)" : "transparent" 
+        backgroundColor: isScrolled ? "rgba(12, 26, 26, 0.95)" : "transparent" 
       }}
     >
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
