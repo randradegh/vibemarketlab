@@ -2,6 +2,13 @@
 
 Landing page para **VibeMarket Lab**, agencia boutique de Vibe Marketing con IA orientada a pymes en México.
 
+## Objetivos
+
+- **Atraer clientes potenciales** (pymes en México) que necesitan presencia digital efectiva
+- **Demostrar capacidad creativa** — el sitio mismo es un showcase de lo que podemos hacer por sus clientes
+- **Generar leads cualificados** mediante un formulario de diagnóstico gratuito
+- **Construir credibilidad** con prueba social, casos de éxito y metodología clara
+
 ## Diseño
 
 Este sitio es un ejemplo de lo que somos capaces de hacer: diseño distintivo, personalidad, y ejecución de primer nivel. No es un template más — es un showcase de nuestra capacidad creativa.
