@@ -59,15 +59,16 @@ export default function FinalCtaSection({ onOpenForm }) {
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
           }`}
           style={{
-            backgroundColor: "white",
-            color: "var(--color-primary)",
+            backgroundColor: "var(--color-primary)",
+            color: "var(--color-highlight)",
+            border: "2px solid white",
           }}
         >
           Agendar mi diagnóstico ahora
-          <ArrowRight size={20} />
+          <ArrowRight size={20} color="var(--color-highlight)" />
         </button>
         <p 
-          className={`mt-6 text-sm transition-all duration-700 delay-200 ${
+          className={`mt-6 text-lg italic transition-all duration-700 delay-200 ${
             isVisible ? "opacity-100" : "opacity-0"
           }`}
           style={{ color: "rgba(255,255,255,0.7)" }}

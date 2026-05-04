@@ -72,7 +72,7 @@ export default function LeadFormModal({ isOpen, onClose }) {
               className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4"
               style={{ backgroundColor: "var(--color-accent)" }}
             >
-              <Send size={24} color="var(--color-primary)" />
+              <Send size={24} color="var(--color-icon-stroke)" />
             </div>
             <h3
               className="text-xl font-semibold mb-2"
@@ -245,7 +245,7 @@ export default function LeadFormModal({ isOpen, onClose }) {
                 className="w-full py-3 rounded-lg font-medium transition-all duration-200 hover:opacity-90 disabled:opacity-50 disabled:cursor-not-allowed"
                 style={{
                   backgroundColor: "var(--color-primary)",
-                  color: "white",
+                  color: "var(--color-highlight)",
                 }}
               >
                 {isSubmitting ? "Enviando..." : "Solicitar diagnóstico"}

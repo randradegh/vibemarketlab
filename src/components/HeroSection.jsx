@@ -39,7 +39,7 @@ export default function HeroSection({ onOpenForm, onScrollToPackages }) {
                 style={{ backgroundColor: "var(--color-primary)", color: "var(--color-text-inverse)" }}
               >
                 <Sparkles size={14} />
-                <span>Para pymes en México</span>
+                <span style={{ color: "var(--color-highlight)" }}>Para pymes en México</span>
               </span>
             </div>
 
@@ -84,11 +84,11 @@ export default function HeroSection({ onOpenForm, onScrollToPackages }) {
                 className="group inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-lg font-medium transition-all duration-300 hover:scale-[1.02]"
                 style={{
                   backgroundColor: "var(--color-primary)",
-                  color: "var(--color-text-inverse)",
+                  color: "var(--color-highlight)",
                 }}
               >
                 Incrementa tus ventas
-                <ArrowRight size={18} className="transition-transform group-hover:translate-x-1" />
+                <ArrowRight size={18} className="transition-transform group-hover:translate-x-1" color="var(--color-highlight)" />
               </button>
 
               <button
@@ -151,8 +151,8 @@ export default function HeroSection({ onOpenForm, onScrollToPackages }) {
 
                 {/* Result highlight */}
                 <div className="mb-6 p-4 rounded-xl" style={{ backgroundColor: "var(--color-primary)" }}>
-                  <div className="text-3xl font-bold" style={{ color: "var(--color-text-inverse)" }}>+65%</div>
-                  <div className="text-sm" style={{ color: "var(--color-text-inverse)", opacity: 0.9 }}>incremento en reservaciones</div>
+                  <div className="text-3xl font-bold" style={{ color: "var(--color-highlight)" }}>+65%</div>
+                  <div className="text-sm" style={{ color: "var(--color-highlight)", opacity: 0.9 }}>incremento en reservaciones</div>
                 </div>
 
                 {/* Mini charts */}

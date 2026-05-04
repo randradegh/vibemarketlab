@@ -22,7 +22,7 @@ export default function SiteHeader({ onOpenForm }) {
           : "bg-transparent"
       }`}
       style={{ 
-        backgroundColor: isScrolled ? "rgba(12, 26, 26, 0.95)" : "transparent" 
+        backgroundColor: isScrolled ? "rgba(12, 26, 26, 0.95)" : "#298e8e" 
       }}
     >
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -58,7 +58,7 @@ export default function SiteHeader({ onOpenForm }) {
               className="px-5 py-2.5 rounded-lg font-medium text-sm transition-all duration-200 hover:opacity-90 hover:scale-[1.02]"
               style={{
                 backgroundColor: "var(--color-primary)",
-                color: "white",
+                color: "var(--color-highlight)",
               }}
             >
               Agenda tu diagnóstico
@@ -102,7 +102,7 @@ export default function SiteHeader({ onOpenForm }) {
                 className="mt-2 mx-2 px-5 py-3 rounded-lg font-medium text-sm transition-all"
                 style={{
                   backgroundColor: "var(--color-primary)",
-                  color: "white",
+                  color: "var(--color-highlight)",
                 }}
               >
                 Agenda tu diagnóstico

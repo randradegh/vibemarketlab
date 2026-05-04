@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Users, Sparkles, Clock, Layout, Eye } from "lucide-react";
+import { Users, Sparkles, Clock, Layout, Eye, Lightbulb } from "lucide-react";
 import { problemItems } from "../data/content";
 
 const iconMap = {
@@ -8,6 +8,7 @@ const iconMap = {
   clock: Clock,
   layout: Layout,
   eye: Eye,
+  lightbulb: Lightbulb,
 };
 
 export default function ProblemSection() {
@@ -71,7 +72,7 @@ export default function ProblemSection() {
                   className="w-14 h-14 rounded-xl flex items-center justify-center mb-5 transition-transform group-hover:scale-110"
                   style={{ backgroundColor: "var(--color-accent)" }}
                 >
-                  <Icon size={26} color="var(--color-primary)" strokeWidth={1.5} />
+                  <Icon size={26} color="var(--color-icon-stroke)" strokeWidth={1.5} />
                 </div>
                 <h3 
                   className="text-lg font-semibold mb-3 group-hover:transition-colors"

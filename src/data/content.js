@@ -16,27 +16,32 @@ export const problemItems = [
   {
     icon: "users",
     title: "Publicas, pero no llegan clientes",
-    description: "Generas contenido constantemente, pero las ventas no se materializan.",
+    description: "Generas contenido constantemente en tus redes sociales, publicaciones y mailing, pero las ventas simplemente no se materializan en tu negocio.",
   },
   {
     icon: "sparkles",
     title: "Tu marca se ve igual que la competencia",
-    description: "No hay nada que te haga diferente. Te confunden con cualquier otro.",
+    description: "No hay nada que te haga diferente del resto. Los clientes potenciales te confunden con cualquier otro proveedor en el mercado.",
   },
   {
     icon: "clock",
     title: "No tienes tiempo para marketing",
-    description: "Entre operar el negocio y hacer contenido, el día no alcanza.",
+    description: "Entre operar el negocio, atender clientes y hacer todas las tareas del día, simplemente el tiempo para marketing no alcanza nunca.",
   },
   {
     icon: "layout",
     title: "Todo lo que haces parece improvisado",
-    description: "No hay coherencia. Cada post es diferente. No hay estrategia.",
+    description: "No hay coherencia visual ni de mensaje. Cada publicación es diferente de la anterior. No existe una estrategia clara que guíe tus acciones.",
   },
   {
     icon: "eye",
     title: "Quieres que te noten, pero no sabes cómo",
-    description: "Sientes que tu negocio merece ser visto, pero no encontrás la fórmula.",
+    description: "Sientes que tu negocio merece ser visto y reconocido en el mercado, pero simplemente no encontrás la fórmula correcta para destacar.",
+  },
+  {
+    icon: "lightbulb",
+    title: "La IA Generativa parece fuera de tu alcance",
+    description: "Has escuchado que la inteligencia artificial puede transformar tu negocio, pero supones que es demasiado compleja, costosa o solo para grandes empresas con presupuestos enormes.",
   },
 ];
 
@@ -100,28 +105,33 @@ export const packageItems = [
 export const benefitItems = [
   {
     icon: "gem",
-    title: "Tu marca va a verse profesional",
-    description: "Una imagen que te representa y te diferencia de la competencia.",
+    title: "Tu marca tendrá una imagen profesional",
+    description: "Una imagen de marca sólida que te diferencia de la competencia y hace que tus clientes te perciban como una empresa establecida y confiable.",
   },
   {
     icon: "target",
-    title: "Empiezas a atraer clientes",
-    description: "Un sistema que trabaja para ti, no al revés.",
+    title: "Empiezas a atraer clientes sin esperar",
+    description: "Deja de perseguir <em>leads</em>. Un sistema automatizado que capta clientes potenciales mientras duermes, los nutre y los prepara para que vengan hacia ti.",
   },
   {
     icon: "zap",
-    title: "Tienes un sistema que funciona",
-    description: "Proceso documentado que puedes mantener y escalar.",
+    title: "Tienes un sistema que funciona 24/7",
+    description: "Un proceso documentado y automatizado que trabaja para ti sin pausa. Que escale sin contratar a más personas y sin invertir tiempo adicional.",
   },
   {
     icon: "messageCircle",
     title: "Tu mensaje se entiende en segundos",
-    description: "Posicionamiento claro que conecta con tu audiencia.",
+    description: "Un posicionamiento claro y diferencial que conecta con tu audiencia ideal. Olvídate de explicar qué haces — tu marca lo dice por sí sola.",
   },
   {
     icon: "shield",
     title: "Te diferencia de la competencia",
-    description: "Una propuesta de valor que no se puede copiar.",
+    description: "Una propuesta de valor única que no se puede copiar. Tus clientes potenciales te eligen a ti porque entienden exactamente por qué eres la mejor opción.",
+  },
+  {
+    icon: "brain",
+    title: "La IA Generativa será tu mejor aliada",
+    description: "Potencia tu negocio con la última tecnología en IA. Contenido automatizado, análisis inteligente y optimización de marketing sin esfuerzo.",
   },
 ];
 

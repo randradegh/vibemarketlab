@@ -6,11 +6,13 @@
   --color-text: #ffffff;
   --color-text-muted: #a7f3d0;
   --color-text-inverse: #134e4a;
-  --color-primary: #2dd4bf;
+  --color-primary: #0a6b5c;
   --color-primary-hover: #5eead4;
   --color-primary-dark: #0d9488;
   --color-accent: #134e4a;
   --color-warm: #fbbf24;
+  --color-highlight: #c6e4f2;
+  --color-icon-stroke: #d2f2ed;
   
   --font-display: 'Boska', serif;
   --font-body: 'Satoshi', sans-serif;

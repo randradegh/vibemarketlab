@@ -116,7 +116,7 @@ export default function PackagesSection({ onOpenForm }) {
                       >
                         <Check
                           size={12}
-                          color="var(--color-primary)"
+                          color="var(--color-icon-stroke)"
                           strokeWidth={3}
                         />
                       </div>
@@ -143,11 +143,11 @@ export default function PackagesSection({ onOpenForm }) {
                 style={{
                   backgroundColor: pkg.popular ? "var(--color-primary)" : "transparent",
                   borderColor: "var(--color-primary)",
-                  color: pkg.popular ? "white" : "var(--color-primary)",
+                  color: pkg.popular ? "var(--color-highlight)" : "var(--color-highlight)",
                 }}
               >
                 {pkg.cta}
-                <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
+                <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" color="var(--color-highlight)" />
               </button>
             </div>
           ))}

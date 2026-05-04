@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Gem, Target, Zap, MessageCircle, Shield } from "lucide-react";
+import { Gem, Target, Zap, MessageCircle, Shield, Brain } from "lucide-react";
 import { benefitItems } from "../data/content";
 
 const iconMap = {
@@ -8,6 +8,7 @@ const iconMap = {
   zap: Zap,
   messageCircle: MessageCircle,
   shield: Shield,
+  brain: Brain,
 };
 
 export default function BenefitsSection() {
@@ -53,13 +54,13 @@ export default function BenefitsSection() {
             className="text-3xl sm:text-4xl lg:text-5xl font-display font-semibold mb-4"
             style={{ color: "var(--color-text)" }}
           >
-            Lo que ganas con un sistema
+            Transforma tu negocio con tecnología que funciona
           </h2>
           <p 
             className="text-lg text-text-muted max-w-xl mx-auto"
             style={{ color: "var(--color-text-muted)" }}
           >
-            No entregamos features. Entregamos resultados que impactan tu negocio.
+            Herramientas simples que generan resultados reales para tu empresa.
           </p>
         </div>
 
@@ -81,7 +82,7 @@ export default function BenefitsSection() {
                   className="w-14 h-14 rounded-xl flex items-center justify-center mb-5 transition-transform group-hover:scale-110"
                   style={{ backgroundColor: "var(--color-accent)" }}
                 >
-                  <Icon size={26} color="var(--color-primary)" strokeWidth={1.5} />
+                  <Icon size={26} color="var(--color-icon-stroke)" strokeWidth={1.5} />
                 </div>
                 <h3 
                   className="text-lg font-semibold mb-3"
@@ -92,9 +93,8 @@ export default function BenefitsSection() {
                 <p 
                   className="text-sm leading-relaxed"
                   style={{ color: "var(--color-text-muted)" }}
-                >
-                  {item.description}
-                </p>
+                  dangerouslySetInnerHTML={{ __html: item.description }}
+                />
               </div>
             );
           })}
